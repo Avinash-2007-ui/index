@@ -69,7 +69,7 @@
         }
 
         nav ul li a:hover {
-            color: rgb(127, 255, 212);
+            color: aquamarine;
             font-size: 1.1rem; /* Slight size increase on hover */
         }
 
@@ -339,14 +339,6 @@
             border-top-left-radius: 8px;/*image should cover it's parent radius*/
             border-top-right-radius: 8px;/*same as above*/
         }
-        .gallery-item video{
-            width: 100%;/*image should cover it's parent full width*/
-            height: 400px;/*specifies the height of image*/
-            object-fit: cover;/*image should fit it's parent conatiner*/
-            display: block;/* any image distrotion should be neglected*/
-            border-top-left-radius: 8px;/*image should cover it's parent radius*/
-            border-top-right-radius: 8px;/*same as above*/
-        }
         .item-discription{
             padding: 15px;
             text-align: center;
@@ -458,107 +450,31 @@
 .bmw-technology{
     text-decoration: none;
 }
-/*
- * This CSS styles the video card component.
- * It places text below the video and applies a hover effect where only the video fades and zooms.
- */
-
-/* The main container for your video component. 
-   Use margin: auto to center it within its parent container. */
-.video {
-    width: 80%;
-    max-width: 700px;
-    margin: 40px auto; /* Adds spacing and centers the component */
-}
-
-/* The link wrapping the video and text.
-   overflow: hidden is crucial to contain the video's zoom. */
-.intelligent {
-    display: block;
-    text-decoration: none; /* Removes the underline from the link */
-    overflow: hidden; /* Hides parts of the video that zoom out of bounds */
-  
-    background-color: inherit; /* Optional: A background for the text area */
-    padding-bottom: 10px; /* Adds space inside the bottom of the card */
-}
-
-/* The video element itself.
-   The transition is set up for a smooth zoom and fade effect. */
-.BMW_Itellegence {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
-}
-
-/* The hover effect targets ONLY the video.
-   When hovering the link, the video scales up and its opacity is reduced.
-   The text is a sibling, so it is NOT affected by this rule. */
-.intelligent:hover .BMW_Itellegence {
-    transform: scale(1.1); /* Zooms the video to 110% of its size */
-    opacity: 0.4; /* Reduces the opacity to 40% */
-}
-
-/* Styling for the main description heading, positioned below the video. */
-.discription {
-    display: block;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-bottom: 5px;
+.video{
+    padding: 40px 20px;
     text-align: center;
-    color: white;
-    text-decoration: none;
-    width: 100%;
-}
-
-/* Styling for the sub-heading, positioned below the main description. */
-.discription-sub-heading {
-    display: block;
-    font-size: 1.5em;
-    color: lightgray;
-    text-align: left;
-    margin-left: 20px;
-    text-decoration: none;
-    width: 100%;
-}
-/* --- Shared Styles for BOTH navbars (Optional) --- */
-nav {
-    width: 100%;
-    padding: 10px;
-}
-
-
-
-/*=============================================================================================*/
-/*                             ending the webpage with second nav bars                         */
-/*=============================================================================================*/
-
-
-.second{
-    background-color: rgb(27, 24, 24);
+    justify-content: center;
+    align-items: center;
     height: 650px;
-}
-nav.main-navbar{
+    width: 750px;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 1;
+    overflow: hidden;
     display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: inherit;
+}
+.video video{
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    background-color: rgb(27, 24, 24);
-    height: 80px;
-    padding: 0 40px;
+
 }
-.left-2{
-    display: flex;
+.BMW_Itellegence{
+    justify-content: center;
     align-items: center;
-    gap: 15px;
 }
- /* Navigation links on the right */
-.navcontent-2{
-    list-style: none;
-    display: flex;
-    gap: 30px; /* Space between the main navigation links */
-    margin: 0; /* Reset default ul margin */
-    padding: 0; /* Reset default ul padding */
-    margin-left: 50px;/* Space from left side ot=f the nav bar*/
-    margin-top: 25px;/* Space from top of the section*/
+.intelligent{
+    text-decoration: none;
+    color: white;
 }
